@@ -140,9 +140,9 @@
         position: fixed;
         z-index: 50;
         inset: 0 0 auto;
-        background: rgba(247, 244, 234, 0.94);
+        background: var(--green);
         backdrop-filter: blur(14px);
-        border-bottom: 1px solid rgba(0, 69, 45, 0.09);
+        border-bottom: 1px solid rgba(247, 244, 234, 0.16);
         transition: box-shadow 0.3s;
       }
       .site-header.scrolled {
@@ -166,6 +166,7 @@
         height: 58px;
         object-fit: contain;
         object-position: left center;
+        filter: brightness(0) invert(1);
       }
       .brand-name {
         font: 500 2rem/0.85 var(--serif);
@@ -185,7 +186,7 @@
         position: relative;
         font-size: 0.72rem;
         font-weight: 600;
-        color: #344238;
+        color: rgba(247, 244, 234, 0.88);
       }
       .nav-links a:not(.nav-cta):after {
         content: "";
@@ -205,16 +206,16 @@
       }
       .nav-links .nav-cta {
         padding: 14px 19px;
-        background: var(--green);
-        color: var(--cream);
+        background: var(--cream);
+        color: var(--green);
       }
       .menu-toggle {
         display: none;
         width: 44px;
         height: 44px;
-        border: 1px solid rgba(0, 69, 45, 0.25);
+        border: 1px solid rgba(247, 244, 234, 0.38);
         background: transparent;
-        color: var(--green);
+        color: var(--cream);
         cursor: pointer;
       }
       .menu-toggle span {
@@ -238,13 +239,13 @@
       .hero:before {
         content: "";
         position: absolute;
-        inset: 0 0 0 48%;
+        inset: 0;
         background:
           linear-gradient(
             90deg,
-            var(--green) 0%,
-            rgba(0, 69, 45, 0.12) 45%,
-            rgba(0, 0, 0, 0.12) 100%
+            rgba(0, 45, 29, 0.91) 0%,
+            rgba(0, 69, 45, 0.72) 48%,
+            rgba(0, 35, 23, 0.38) 100%
           ),
           url("assets/830027619_18007945910988482_3279781496728463373_n.jpg")
             center/cover;
@@ -265,7 +266,7 @@
         align-items: center;
       }
       .hero-copy {
-        width: 57%;
+        width: min(760px, 78%);
         padding: 70px 0 90px;
       }
       .hero .eyebrow {
@@ -704,7 +705,14 @@
       .contact-row strong {
         font-size: 0.86rem;
         font-weight: 600;
+        overflow-wrap: anywhere;
       }
+      .contact-row strong a {
+        text-decoration: underline;
+        text-decoration-color: var(--sage);
+        text-underline-offset: 4px;
+      }
+      .contact-row strong a:hover { color: var(--green); }
       .contact-form {
         padding: 38px;
         background: #e9ecdf;
@@ -781,6 +789,7 @@
         height: 70px;
         object-fit: contain;
         object-position: left center;
+        filter: brightness(0) invert(1);
       }
       .footer-brand p {
         max-width: 290px;
@@ -877,7 +886,7 @@
           opacity: 0.78;
         }
         .hero-copy {
-          width: 68%;
+          width: min(720px, 82%);
         }
         .about-grid {
           gap: 6%;
@@ -940,8 +949,8 @@
           align-items: stretch;
           gap: 0;
           padding: 15px 20px 26px;
-          background: var(--cream);
-          border-bottom: 1px solid rgba(0, 69, 45, 0.15);
+          background: var(--green);
+          border-bottom: 1px solid rgba(247, 244, 234, 0.16);
           opacity: 0;
           visibility: hidden;
           transform: translateY(-10px);
@@ -957,7 +966,8 @@
         }
         .nav-links a {
           padding: 15px 4px;
-          border-bottom: 1px solid rgba(0, 69, 45, 0.1);
+          border-bottom: 1px solid rgba(247, 244, 234, 0.14);
+          color: rgba(247, 244, 234, 0.9);
           font-size: 0.82rem;
         }
         .nav-links .nav-cta {
@@ -977,8 +987,8 @@
           background-image:
             linear-gradient(
               90deg,
-              rgba(0, 69, 45, 0.97),
-              rgba(0, 69, 45, 0.45)
+              rgba(0, 45, 29, 0.88),
+              rgba(0, 69, 45, 0.52)
             ),
             url("assets/830027619_18007945910988482_3279781496728463373_n.jpg");
           background-position: center;
