@@ -156,7 +156,7 @@
       .nav .brand img {
         display: block;
         width: 164px;
-        height: 76px;
+        height: 120px;
         object-fit: contain;
         object-position: left center;
         filter: brightness(0) invert(1);
