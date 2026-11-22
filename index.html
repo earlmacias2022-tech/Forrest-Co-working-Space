@@ -61,64 +61,122 @@
             <div class="hero-carousel" aria-label="FORREST photo highlights">
               <div class="hero-carousel-frame">
                 <img
+                  class="hero-carousel-next-image"
+                  src="assets/831021538_18007945868988482_7274033026963285990_n.jpg"
+                  alt=""
+                  aria-hidden="true"
+                />
+                <img
                   class="hero-carousel-image"
                   src="assets/709527150_920985647660380_4177484761977962884_n.jpg"
                   alt="A view inside FORREST Workspace"
                 />
                 <div class="hero-carousel-caption">
                   <span>Inside FORREST</span>
-                  <span class="hero-carousel-count" aria-live="polite"
-                    >01 / 05</span
-                  >
+                  <span class="hero-carousel-count" aria-live="polite">01 / 05</span>
                 </div>
               </div>
               <div class="hero-carousel-controls">
-                <p>Take a look around</p>
-                <div class="hero-carousel-buttons">
-                  <button
-                    class="carousel-arrow carousel-prev"
-                    type="button"
-                    aria-label="Previous photo"
-                  >
-                    ←
-                  </button>
-                  <div class="carousel-dots" aria-label="Choose a photo">
-                    <button
-                      class="carousel-dot is-active"
-                      type="button"
-                      aria-label="Show photo 1"
-                      aria-current="true"
-                    ></button>
-                    <button
-                      class="carousel-dot"
-                      type="button"
-                      aria-label="Show photo 2"
-                    ></button>
-                    <button
-                      class="carousel-dot"
-                      type="button"
-                      aria-label="Show photo 3"
-                    ></button>
-                    <button
-                      class="carousel-dot"
-                      type="button"
-                      aria-label="Show photo 4"
-                    ></button>
-                    <button
-                      class="carousel-dot"
-                      type="button"
-                      aria-label="Show photo 5"
-                    ></button>
-                  </div>
-                  <button
-                    class="carousel-arrow carousel-next"
-                    type="button"
-                    aria-label="Next photo"
-                  >
-                    →
-                  </button>
-                </div>
+                <p>A look around FORREST</p>
+                <span class="hero-carousel-hint">A few moments here</span>
               </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+      <section class="section" id="about">
+        <div class="wrap about-grid">
+          <div class="about-visual reveal">
+            <div class="about-photo">
+              <img
+                src="assets/707739930_920986420993636_4431033528111646304_n.jpg"
+                alt="FORREST workspace photograph"
+              />
+            </div>
+            <div class="about-inset">
+              <img
+                src="assets/896298942_1158002463359971_8423479989970257130_n.jpg"
+                alt="A detail of the FORREST workspace"
+              />
+            </div>
+            <div class="about-stamp">Make room<br />for what<br />matters.</div>
+          </div>
+          <div class="about-copy reveal delay-1">
+            <div class="eyebrow">The FORREST feeling</div>
+            <h2>A space that lets you <em>flourish.</em></h2>
+            <p>
+              Good work needs room to happen. FORREST brings together a
+              coworking space and study hub for students, remote workers,
+              virtual assistants, travelers, and independent professionals.
+            </p>
+            <p>
+              Whether you need a place to review, work remotely, meet with
+              others, or take a quiet break between plans, FORREST offers a
+              place to settle in and stay productive.
+            </p>
+            <a class="text-link" href="#contact"
+              >Get to know FORREST <span>→</span></a
+            >
+          </div>
+        </div>
+      </section>
+
+      <section class="section spaces" id="spaces">
+        <div class="wrap">
+          <div class="section-head reveal">
+            <div>
+              <div class="eyebrow">A place for every kind of focus</div>
+              <h2>Find the space<br />that fits your flow.</h2>
+            </div>
+            <p>
+              Explore the workspace options and facilities available at FORREST,
+              from shared work areas to spaces for meetings and rest.
+            </p>
+          </div>
+          <div class="space-grid">
+            <article class="space-card tall reveal">
+              <img
+                src="assets/830027619_18007945910988482_3279781496728463373_n.jpg"
+                alt="Open-plan coworking space with natural light"
+              />
+              <div class="space-card-content">
+                <span>01 / Coworking &amp; study hub</span>
+                <h3>Room to focus.</h3>
+                <p>
+                  A shared place for students, remote workers, and independent
+                  professionals.
+                </p>
+              </div>
+            </article>
+            <div class="space-side">
+              <article class="space-card reveal delay-1">
+                <img
+                  src="assets/831021538_18007945868988482_7274033026963285990_n.jpg"
+                  alt="Collaborative desk area"
+                />
+                <div class="space-card-content">
+                  <span>02 / Conference room</span>
+                  <h3>Meet and connect.</h3>
+                  <p>
+                    A dedicated room option for group discussions and meetings.
+                  </p>
+                </div>
+              </article>
+              <article class="space-card reveal delay-2">
+                <img
+                  src="assets/831192916_18007945856988482_1955940421625848760_n.jpg"
+                  alt="Quiet study area with desks"
+                />
+                <div class="space-card-content">
+                  <span>03 / Capsule pod</span>
+                  <h3>A place to pause.</h3>
+                  <p>
+                    A capsule pod option for visitors who need a little rest.
+                  </p>
+                </div>
+              </article>
             </div>
           </div>
         </div>
@@ -467,53 +525,38 @@
       ];
       const carousel = document.querySelector(".hero-carousel");
       const carouselImage = document.querySelector(".hero-carousel-image");
+      const carouselNextImage = document.querySelector(".hero-carousel-next-image");
       const carouselCount = document.querySelector(".hero-carousel-count");
-      const carouselDots = [...document.querySelectorAll(".carousel-dot")];
       let activeSlide = 0;
       let carouselTimer;
-      const showSlide = (index) => {
+      let transitionTimer;
+      const updateCarousel = (index) => {
         activeSlide = (index + carouselSlides.length) % carouselSlides.length;
-        carouselImage.style.opacity = "0";
-        window.setTimeout(() => {
+        const nextSlide = (activeSlide + 1) % carouselSlides.length;
+        carouselImage.classList.add("is-changing");
+        window.clearTimeout(transitionTimer);
+        transitionTimer = window.setTimeout(() => {
           carouselImage.src = carouselSlides[activeSlide].src;
           carouselImage.alt = carouselSlides[activeSlide].alt;
-          carouselImage.style.opacity = "1";
-        }, 160);
+          carouselNextImage.src = carouselSlides[nextSlide].src;
+          carouselNextImage.alt = "";
+          carouselImage.classList.remove("is-changing");
+        }, 260);
         carouselCount.textContent =
           String(activeSlide + 1).padStart(2, "0") +
           " / " +
           String(carouselSlides.length).padStart(2, "0");
-        carouselDots.forEach((dot, dotIndex) => {
-          const selected = dotIndex === activeSlide;
-          dot.classList.toggle("is-active", selected);
-          if (selected) dot.setAttribute("aria-current", "true");
-          else dot.removeAttribute("aria-current");
-        });
       };
       const stopCarousel = () => window.clearInterval(carouselTimer);
       const startCarousel = () => {
         stopCarousel();
         if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
           carouselTimer = window.setInterval(
-            () => showSlide(activeSlide + 1),
-            5000,
+            () => updateCarousel(activeSlide + 1),
+            5200,
           );
         }
       };
-      document.querySelector(".carousel-prev").addEventListener("click", () => {
-        showSlide(activeSlide - 1);
-        startCarousel();
-      });
-      document.querySelector(".carousel-next").addEventListener("click", () => {
-        showSlide(activeSlide + 1);
-        startCarousel();
-      });
-      carouselDots.forEach((dot, index) => {
-        dot.addEventListener("click", () => {
-          showSlide(index);
-          startCarousel();
-        });
-      });
       carousel.addEventListener("mouseenter", stopCarousel);
       carousel.addEventListener("mouseleave", startCarousel);
       carousel.addEventListener("focusin", stopCarousel);
