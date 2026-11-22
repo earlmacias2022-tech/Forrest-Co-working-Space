@@ -558,6 +558,89 @@
       .space-side .space-card-content h3 {
         font-size: 1.8rem;
       }
+      /* Rates */
+      .rates {
+        background: var(--cream);
+      }
+      .rates .section-head h2 em {
+        color: var(--green);
+      }
+      .rates-grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 18px;
+      }
+      .rate-card {
+        display: flex;
+        flex-direction: column;
+        min-height: 100%;
+        padding: 32px;
+        border: 1px solid rgba(0, 69, 45, 0.16);
+        background: #fdfcf7;
+      }
+      .rate-card-featured {
+        border-color: rgba(0, 69, 45, 0.42);
+        background: #e9ecdf;
+      }
+      .rate-kicker {
+        color: var(--muted);
+        font-size: 0.62rem;
+        font-weight: 700;
+        letter-spacing: 0.15em;
+        text-transform: uppercase;
+      }
+      .rate-card h3 {
+        margin: 13px 0 8px;
+        color: var(--green);
+        font: 400 2rem/1.15 var(--serif);
+      }
+      .rate-card-top p {
+        max-width: 390px;
+        margin: 0;
+        color: var(--muted);
+        font-size: 0.8rem;
+        line-height: 1.7;
+      }
+      .rate-list {
+        display: grid;
+        gap: 0;
+        margin-top: 25px;
+      }
+      .rate-row {
+        display: flex;
+        align-items: baseline;
+        justify-content: space-between;
+        gap: 18px;
+        padding: 13px 0;
+        border-top: 1px solid rgba(0, 69, 45, 0.14);
+      }
+      .rate-row span {
+        color: var(--muted);
+        font-size: 0.82rem;
+      }
+      .rate-row strong {
+        color: var(--green);
+        font: 500 1.25rem var(--serif);
+        white-space: nowrap;
+      }
+      .rate-subgroup {
+        margin-top: 23px;
+      }
+      .rate-subtitle {
+        display: block;
+        margin-bottom: 7px;
+        color: var(--green);
+        font-size: 0.63rem;
+        font-weight: 700;
+        letter-spacing: 0.13em;
+        text-transform: uppercase;
+      }
+      .rates-note {
+        margin: 24px 0 0;
+        color: var(--muted);
+        font-size: 0.72rem;
+        text-align: center;
+      }
       /* Benefits */
       .benefits {
         background: var(--green);
@@ -1085,6 +1168,13 @@
         }
         .space-side .space-card {
           min-height: 300px;
+        }
+        .rates-grid {
+          grid-template-columns: 1fr;
+          gap: 14px;
+        }
+        .rate-card {
+          padding: 26px 22px;
         }
         .benefit-grid {
           grid-template-columns: 1fr 1fr;
