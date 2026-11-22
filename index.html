@@ -44,43 +44,82 @@
       <section class="hero" aria-labelledby="hero-title">
         <div class="wrap hero-inner">
           <div class="hero-layout">
-          <div class="hero-copy">
-            <h1 id="hero-title">
-              Find your<br /><em>focus.</em> Find<br />your place.
-            </h1>
-            <p>
-              A welcoming coworking space and study hub for focused study,
-              remote work, and productive days in Malaybalay.
-            </p>
-            <div class="hero-actions">
-              <a class="button light" href="#spaces"
-                >Explore the space <span>↗</span></a
-              >
-            </div>
-          </div>
-          <div class="hero-carousel" aria-label="FORREST photo highlights">
-            <div class="hero-carousel-frame">
-              <img class="hero-carousel-image" src="assets/709527150_920985647660380_4177484761977962884_n.jpg" alt="A view inside FORREST Workspace" />
-              <div class="hero-carousel-caption">
-                <span>Inside FORREST</span>
-                <span class="hero-carousel-count" aria-live="polite">01 / 05</span>
+            <div class="hero-copy">
+              <h1 id="hero-title">
+                Find your<br /><em>focus.</em> Find<br />your place.
+              </h1>
+              <p>
+                A welcoming coworking space and study hub for focused study,
+                remote work, and productive days in Malaybalay.
+              </p>
+              <div class="hero-actions">
+                <a class="button light" href="#spaces"
+                  >Explore the space <span>↗</span></a
+                >
               </div>
             </div>
-            <div class="hero-carousel-controls">
-              <p>Take a look around</p>
-              <div class="hero-carousel-buttons">
-                <button class="carousel-arrow carousel-prev" type="button" aria-label="Previous photo">←</button>
-                <div class="carousel-dots" aria-label="Choose a photo">
-                  <button class="carousel-dot is-active" type="button" aria-label="Show photo 1" aria-current="true"></button>
-                  <button class="carousel-dot" type="button" aria-label="Show photo 2"></button>
-                  <button class="carousel-dot" type="button" aria-label="Show photo 3"></button>
-                  <button class="carousel-dot" type="button" aria-label="Show photo 4"></button>
-                  <button class="carousel-dot" type="button" aria-label="Show photo 5"></button>
+            <div class="hero-carousel" aria-label="FORREST photo highlights">
+              <div class="hero-carousel-frame">
+                <img
+                  class="hero-carousel-image"
+                  src="assets/709527150_920985647660380_4177484761977962884_n.jpg"
+                  alt="A view inside FORREST Workspace"
+                />
+                <div class="hero-carousel-caption">
+                  <span>Inside FORREST</span>
+                  <span class="hero-carousel-count" aria-live="polite"
+                    >01 / 05</span
+                  >
                 </div>
-                <button class="carousel-arrow carousel-next" type="button" aria-label="Next photo">→</button>
+              </div>
+              <div class="hero-carousel-controls">
+                <p>Take a look around</p>
+                <div class="hero-carousel-buttons">
+                  <button
+                    class="carousel-arrow carousel-prev"
+                    type="button"
+                    aria-label="Previous photo"
+                  >
+                    ←
+                  </button>
+                  <div class="carousel-dots" aria-label="Choose a photo">
+                    <button
+                      class="carousel-dot is-active"
+                      type="button"
+                      aria-label="Show photo 1"
+                      aria-current="true"
+                    ></button>
+                    <button
+                      class="carousel-dot"
+                      type="button"
+                      aria-label="Show photo 2"
+                    ></button>
+                    <button
+                      class="carousel-dot"
+                      type="button"
+                      aria-label="Show photo 3"
+                    ></button>
+                    <button
+                      class="carousel-dot"
+                      type="button"
+                      aria-label="Show photo 4"
+                    ></button>
+                    <button
+                      class="carousel-dot"
+                      type="button"
+                      aria-label="Show photo 5"
+                    ></button>
+                  </div>
+                  <button
+                    class="carousel-arrow carousel-next"
+                    type="button"
+                    aria-label="Next photo"
+                  >
+                    →
+                  </button>
+                </div>
               </div>
             </div>
-          </div>
           </div>
         </div>
       </section>
@@ -328,8 +367,7 @@
           <div>
             <h4>Explore</h4>
             <div class="footer-links">
-              <a href="#about">Our story</a><a href="#spaces">The space</a
-              >
+              <a href="#about">Our story</a><a href="#spaces">The space</a>
             </div>
           </div>
           <div>
@@ -406,11 +444,26 @@
       document.getElementById("year").textContent = new Date().getFullYear();
 
       const carouselSlides = [
-        { src: "assets/709527150_920985647660380_4177484761977962884_n.jpg", alt: "A view inside FORREST Workspace" },
-        { src: "assets/831021538_18007945868988482_7274033026963285990_n.jpg", alt: "A collaborative workspace at FORREST" },
-        { src: "assets/765315226_17999530001988482_3497457773843069738_n.jpg", alt: "Another view of the FORREST interior" },
-        { src: "assets/708754747_920984280993850_6473787714504965063_n.jpg", alt: "A detail from the FORREST photo gallery" },
-        { src: "assets/831453656_18007945844988482_446161728820973052_n.jpg", alt: "Workspace facilities at FORREST" },
+        {
+          src: "assets/709527150_920985647660380_4177484761977962884_n.jpg",
+          alt: "A view inside FORREST Workspace",
+        },
+        {
+          src: "assets/831021538_18007945868988482_7274033026963285990_n.jpg",
+          alt: "A collaborative workspace at FORREST",
+        },
+        {
+          src: "assets/765315226_17999530001988482_3497457773843069738_n.jpg",
+          alt: "Another view of the FORREST interior",
+        },
+        {
+          src: "assets/708754747_920984280993850_6473787714504965063_n.jpg",
+          alt: "A detail from the FORREST photo gallery",
+        },
+        {
+          src: "assets/831453656_18007945844988482_446161728820973052_n.jpg",
+          alt: "Workspace facilities at FORREST",
+        },
       ];
       const carousel = document.querySelector(".hero-carousel");
       const carouselImage = document.querySelector(".hero-carousel-image");
@@ -426,8 +479,10 @@
           carouselImage.alt = carouselSlides[activeSlide].alt;
           carouselImage.style.opacity = "1";
         }, 160);
-        carouselCount.textContent = String(activeSlide + 1).padStart(2, "0") +
-          " / " + String(carouselSlides.length).padStart(2, "0");
+        carouselCount.textContent =
+          String(activeSlide + 1).padStart(2, "0") +
+          " / " +
+          String(carouselSlides.length).padStart(2, "0");
         carouselDots.forEach((dot, dotIndex) => {
           const selected = dotIndex === activeSlide;
           dot.classList.toggle("is-active", selected);
@@ -439,7 +494,10 @@
       const startCarousel = () => {
         stopCarousel();
         if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
-          carouselTimer = window.setInterval(() => showSlide(activeSlide + 1), 5000);
+          carouselTimer = window.setInterval(
+            () => showSlide(activeSlide + 1),
+            5000,
+          );
         }
       };
       document.querySelector(".carousel-prev").addEventListener("click", () => {

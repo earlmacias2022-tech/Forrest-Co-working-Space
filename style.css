@@ -235,7 +235,7 @@
         inset: 0;
         background:
           linear-gradient(90deg, rgba(0, 45, 29, 0.93) 0%, rgba(0, 69, 45, 0.76) 48%, rgba(0, 35, 23, 0.42) 100%),
-          url("assets/830027619_18007945910988482_3279781496728463373_n.jpg") center 64%/cover;
+          url("assets/830027619_18007945910988482_3279781496728463373_n.jpg") center 40%/cover;
       }
       .hero:after {
         content: "";
